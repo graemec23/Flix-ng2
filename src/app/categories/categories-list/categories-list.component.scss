@@ -1,0 +1,27 @@
+@import '../../../assets/settings/colors';
+@import '../../../assets/tools/bem';
+
+.c-categorie-list__item {
+  width: 20%;
+  padding: 1%;
+  margin: 1% 2%;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #f1f1f1;
+}
+
+@include block(c-category) {
+  color: $primary-text-color;
+  text-decoration: none;
+  
+  
+  
+  @include element (image) {
+    width: 100%;
+    // background-color: $divider-color;
+  }
+  
+  @include element(description) {
+    padding-top: 2%;
+  }
+}

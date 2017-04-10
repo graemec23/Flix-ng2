@@ -1,0 +1,6 @@
+<a class="c-categorie-list__item c-category" *ngFor="let item of items | filter: term" target="_blank" href="{{netFlixLink}}{{item.id}}" title="{{item.title}}" rel="noopener noreferrer">
+  <img [src]="fullImagePath" class="c-category__image" title="{{item.id}} {{item.title}}" alt="{{item.title}}" height="200px" width=100%>
+    <div class="c-category__description">
+      <h3>{{item.title}}</h3>
+  </div>
+</a>

@@ -1,0 +1,21 @@
+@include block(c-header) {
+  width: 100%;
+  position: relative;
+  background-color: $primary-color;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  
+  @include element(block)  {
+    height: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+    background-color: $primary-color-dark;
+  }
+  
+  @include element(title) {
+    display: inline-block;
+    width: 50%;
+    color: $primary-color-text;
+    // margin-top: 30px;
+  }
+}

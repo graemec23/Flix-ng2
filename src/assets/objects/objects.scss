@@ -1,0 +1,22 @@
+.o-wrapper {
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@include block(o-layout) {
+  display: block;
+  margin: 0 0 0 -24px;
+  padding: 0;
+  
+  @include element(item) {
+    display: inline-block;
+    box-sizing: border-box;
+    padding-left: 24px;
+    vertical-align: top;
+  }
+
+}

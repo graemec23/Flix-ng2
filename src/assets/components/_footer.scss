@@ -1,0 +1,7 @@
+@include block(c-footer) {
+  padding: 24px 0;
+  @include element(title) {
+    
+    // color: $primary-color-text;
+  }
+}

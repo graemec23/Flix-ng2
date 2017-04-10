@@ -1,0 +1,25 @@
+
+
+// Settings
+@import 'assets/settings/colors';
+
+
+// Tools
+@import 'assets/tools/bem';
+
+// Generic
+@import 'assets/generic/box-sizing';
+@import 'assets/generic/fonts';
+@import 'assets/generic/normalize';
+@import 'assets/generic/reset';
+
+// elements
+@import 'assets/elements/page';
+
+// objects
+
+@import 'assets/objects/objects';
+
+// Components
+@import 'assets/components/header';
+@import 'assets/components/footer';

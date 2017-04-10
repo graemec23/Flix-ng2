@@ -1,0 +1,40 @@
+@import '../../assets/tools/bem';
+@import '../../assets/settings/colors';
+
+@include block (c-categories) {
+  @include element(container) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  
+  @include element(list) {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
+
+
+.c-categorie-list__item {
+  width: 20%;
+  padding: 1%;
+  margin: 1% 2%;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #f1f1f1;
+}
+
+@include block(c-category) {
+  color: $primary-text-color;
+  text-decoration: none;
+  
+  
+  
+  @include element (image) {
+    width: 100%;
+    // background-color: $divider-color;
+  }
+  
+  @include element(description) {
+    padding-top: 2%;
+  }
+}
