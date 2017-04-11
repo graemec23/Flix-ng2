@@ -1,5 +1,5 @@
-# Furora.Media
-React Redux Progressive + Universal web app Portfolio site, powered by node + express. SCSS based on inuitcss, webpack 2 used to create Service worker.
+# Netflix and Angular 2 app
+Simple Angular 2 app, scraping Netflix categories and showing them in filtered list. Technologies involved, Angular 2, Express + Cheerio.
 
 ##Install dependencies
 ```js
