@@ -8,7 +8,7 @@ yarn install
 
 ##Run
 ```js
-npm start
+npm start, page loads on port 5000, server on 9999
 ```
 
 ##License

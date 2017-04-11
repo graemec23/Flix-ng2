@@ -8,17 +8,14 @@ const serverConfig = config.getConfigByEnv();
 const url = path.join(__dirname, serverConfig.netflixCatgories.jsonPath);
 
 
-const loadNetFlixList = (req, res) => {
-  
+const loadJsonFile = () => {
   let categoryList = fs.readFileSync(url,  'utf-8', (err) => {
     if (err) throw err;
   });
-  
   return categoryList;
-};
+}
 
-
-const storeCategories = (tokenPath, token, expiry) => {
+const storeCategories = (tokenPath, token) => {
   try {
     fs.mkdirSync('./');
   } catch (err) {
@@ -27,14 +24,13 @@ const storeCategories = (tokenPath, token, expiry) => {
     }
   }
 
-  fs.writeFile(tokenPath, JSON.stringify(tokenObj), 'utf-8', (err) => {
+  fs.writeFile(tokenPath, JSON.stringify(token), 'utf-8', (err) => {
     if (err) throw err;
   });
 };
 
 
-
-const scrapeNetFlixList = (req, res) => {
+const netFlixCategories = (req, res) => {
   request(serverConfig.netflixCatgories.fetchUrl, function(err, response, html) {
     let $ = cheerio.load(html);
     let categoryList = [];
@@ -43,12 +39,11 @@ const scrapeNetFlixList = (req, res) => {
         id: $(this).text().split(' = ')[0],
         title: $(this).text().split(' = ')[1],
       };
-      console.log(data)
       categoryList.push(data);
     });
-// console.log(categoryList)
-    return categoryList;
+    res.status(200).send(categoryList);
   });
 }
 
-export { loadNetFlixList, scrapeNetFlixList, storeCategories};
+
+export { netFlixCategories };

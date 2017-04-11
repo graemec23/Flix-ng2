@@ -1,8 +1,9 @@
 @import '../../assets/settings/colors';
 @import '../../assets/tools/bem';
 
-@include element(c-search) {
-  display: inline-block;
-  width: 50%;
-  float: right;
+@include block(c-search) {
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
+  margin-bottom: 24px;
 }
