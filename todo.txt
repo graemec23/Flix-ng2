@@ -1,2 +1,3 @@
 // TODO: cache scrape result into json
 // TODO: add testing for app.
+// TODO: move header and footer into separate components
